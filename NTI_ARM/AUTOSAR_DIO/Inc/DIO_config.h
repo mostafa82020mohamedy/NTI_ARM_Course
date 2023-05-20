@@ -3,8 +3,6 @@
 
 
 
-
-
 #define		GPIO_INPUT_ANALOG				0000
 #define		GPIO_INPUT_FLOAT				0100
 #define		GPIO_INPUT_PULL_UP_DOWN			1000
@@ -23,6 +21,9 @@
 #define		GPIO_OUTPUT_50MHZ_OD			0111
 #define		GPIO_OUTPUT_50MHZ_AFPP			1011
 #define		GPIO_OUTPUT_50MHZ_AFOD			1111
+
+
+
 
 /*
  Choose :
@@ -43,9 +44,9 @@
           GPIO_OUTPUT_50MHZ_AFOD         for    Alternate Function Open Drain Output @ 50MHz
 
 */
-#define PIN0_DIR                  GPIO_INPUT_PULL_UP_DOWN
-#define PIN1_DIR                  GPIO_INPUT_PULL_UP_DOWN
-#define PIN2_DIR                  GPIO_INPUT_PULL_UP_DOWN
+#define PIN0_DIR                  GPIO_OUTPUT_2MHZ_PP
+#define PIN1_DIR                  GPIO_OUTPUT_2MHZ_PP
+#define PIN2_DIR                  GPIO_OUTPUT_2MHZ_PP
 #define PIN3_DIR                  GPIO_OUTPUT_2MHZ_PP
 #define PIN4_DIR                  GPIO_OUTPUT_2MHZ_PP
 #define PIN5_DIR                  GPIO_OUTPUT_2MHZ_PP

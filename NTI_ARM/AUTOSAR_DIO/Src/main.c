@@ -23,11 +23,17 @@ int main(){
 		while (1)
 		{
 
-			Led_voidON(PORTA, PIN3 );
+			Led_voidON(PORTA, PIN0 );
+			Led_voidOFF(PORTA, PIN1);
+			Led_voidOFF(PORTA, PIN2);
 			_delay_ms(1000);
-			Led_voidON(PORTA, PIN4);
+			Led_voidON(PORTA, PIN0 );
+			Led_voidON(PORTA, PIN1 );
+			Led_voidOFF(PORTA, PIN2);
 			_delay_ms(1000);
-			Led_voidON(PORTA, PIN5);
+			Led_voidON(PORTA, PIN0 );
+			Led_voidON(PORTA, PIN1 );
+			Led_voidON(PORTA, PIN2 );
 			_delay_ms(1000);
 		}
 
