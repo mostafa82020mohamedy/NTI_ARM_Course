@@ -9,13 +9,8 @@
 #define RTOS_CONFIG_H_
 
 
-
-
-
-
-
-///* Set the Max Number of Tasks in the System */
-//#define TASK_NUM           3
+/* Set the Max Number of Tasks in the System */
+#define TASK_NUM           3
 
 
 #endif /* RTOS_CONFIG_H_ */
