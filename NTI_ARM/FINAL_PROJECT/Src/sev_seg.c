@@ -1,0 +1,126 @@
+/*
+ * sev_seg.c
+ *
+ * Created: 1/14/2023 2:16:21 PM
+ *  Author: ahmed saad
+ */ 
+#include "DIO_interface.h"
+#include "sev_seg.h"
+#include "sev_seg_config.h"
+
+void SEV_SEG_Init(void)
+{
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_OUTPUT_2MHZ_PP);
+//	DIO_voidSetPinDirection(SEV_SEG_PORT,SEV_SEG_DP_PIN,GPIO_OUTPUT_2MHZ_PP);
+}
+void SEV_SEG_Display(u8 value)
+{
+	switch(value)
+	{
+		case 0:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_HIGH);
+			break;
+		case 1:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_HIGH);
+			break;
+		case 2:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 3:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 4:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 5:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 6:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 7:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_HIGH);
+			break;
+		case 8:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		case 9:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_LOW);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_LOW);
+			break;
+		default:
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_A_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_B_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_C_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_D_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_E_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_F_PIN ,GPIO_HIGH);
+			DIO_voidSetPinValue(SEV_SEG_PORT,SEV_SEG_G_PIN ,GPIO_HIGH);
+			break;
+	}
+}
